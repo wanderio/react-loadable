@@ -11,6 +11,8 @@ let WEBPACK_REQUIRE_WEAK_IDS = new Set();
 let isWebpack = typeof __webpack_require__ !== "undefined";
 let requireFn = isWebpack ? __webpack_require__ : module.require.bind(module);
 
+console.log("isWebpack", isWebpack);
+
 let babelInterop = obj => {
   // $FlowIgnore
   return obj && obj.__esModule ? obj.default : obj;
